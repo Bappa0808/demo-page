@@ -1,0 +1,407 @@
+/* General Reset */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .total_div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4195A3;
+    padding: 0 20px;
+    height: 84px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Navigation Items */
+  .Nav_items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .Nav_items li {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .Nav_items li:hover {
+    background: #327d8b;
+    color: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .Nav_items {
+      position: absolute;
+      top: 84px;
+      right: 0;
+      background: #4195A3;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      z-index: 1000;
+    }
+  
+    .Nav_items.active {
+      max-height: 300px; /* Adjust height based on the content */
+    }
+  
+    .Nav_items li {
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #327d8b;
+    }
+  
+    .Nav_items li:last-child {
+      border-bottom: none;
+    }
+  }
+ /* About Section Container */
+.about_section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  /* Title */
+  h3 {
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #EED5BF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for emphasis */
+  }
+  
+ /* About Us Section */
+.about_us {
+    background: url('../img/1.webp') no-repeat center/cover; /* Add background image */
+    color: #fff; /* Ensure text is readable on the image */
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 100%;
+    height: 270px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+    line-height: 1.8; /* Better readability */
+    position: relative; /* For overlay effects */
+    overflow: hidden; /* Ensures background stays inside rounded corners */
+  }
+  
+  /* Optional: Overlay for better text visibility */
+  .about_us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
+    /* Matches the border radius of the container */
+  }
+  
+  /* Text Content Styling */
+  .about_us h4, 
+  .about_us p {
+    position: relative; /* Ensures text is above the overlay */
+    z-index: 2;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Subtitle */
+  
+  
+  /* Paragraph Text */
+  .about_us p {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  .about_us_heading{
+    font-size: 25px;
+  }
+  .about_us_p{
+     font-size: 15px;
+  }
+
+  /* Our Story Section */
+.our_story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto; 
+  }
+  
+  /* Image Styling */
+  .our_story_img {
+    width: 300px;
+    height: 300px;
+    background: url('../img/2.png') no-repeat center/cover; /* Add image as background */
+    border-radius: 10px; /* Rounded corners for a soft look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+  }
+  
+  /* Text Container */
+  .our_story div {
+    flex: 1; /* Text container takes remaining space */
+  }
+  
+  /* Heading */
+  .our_story_heading {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    color: #000000;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow for effect */
+  }
+  
+  /* Subtitle */
+  .our_story_subtitle {
+    font-size: 10px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #555; /* Softer color for readability */
+    text-align: justify;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .our_story {
+      flex-direction: column; /* Stack items vertically on small screens */
+      text-align: center;
+      gap: 10px;
+    }
+
+    .our_story_img {
+      width: 250px;
+      height: 250px;
+    
+    }
+  }
+  
+  
+  /* Additional Aesthetic Touches */
+  .about_us p:first-of-type {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 36px;
+    }
+  
+    .about_us h4 {
+      font-size: 24px;
+    }
+  
+    .about_us p {
+      font-size: 16px;
+    }
+  }
+.Cultural_Highlights {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .Slide_show {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Matches image height */
+    overflow: hidden;
+    margin: 20px auto;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .images {
+    display: flex;
+    gap: 20px; 
+    position: absolute;
+    top: 8%; 
+    right: -10%;
+    transform: translateY(-50%);
+    animation: slide-right 20s linear infinite; 
+  }
+  
+  /* Individual Images */
+  .images img { 
+    width: 300px;
+    height: 400px;
+    object-fit: cover; 
+    background-size: 100% 100%;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+  
+  /* Keyframes for Sliding */
+  @keyframes slide-right {
+    0% {
+      transform: translateX(50%); /* Start offscreen to the left */
+    }
+    100% {
+      transform: translateX(-50%); /* Move completely offscreen to the right */
+    }
+  }
+  
+
+  .ellipse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 130px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .top_ellipse {
+    top: 1140px;
+    
+  }
+  
+  .bottom_ellipse {
+    top: 1500px; 
+   
+  }
+
+  @media (max-width: 768px) {
+    .Cultural_Highlights p{
+        font-size: 20px;
+    }
+  
+    .images {
+      top: 140px;
+    }
+  
+    .images img{
+    width: 180px;
+    height: 255px;
+    object-fit: cover; 
+    background-size: 100% 100%;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+
+    }
+  
+    .top_ellipse {
+        top: 1120px;
+    }
+  
+    .bottom_ellipse {
+      top: 1380px;
+    }
+  }
+  .Explore_Pahadi_Delicacies {
+    display: flex;
+    padding: 10px;
+    gap: 50px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    animation: slide-left 20s linear infinite; 
+  }
+  
+  .Explore_Pahadi_Delicacies p {
+    font-size: 24px; 
+    font-family: Wulkan display;
+    color: #333; 
+    flex-shrink: 0; 
+    padding: 10px 20px;
+  }
+  
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(100%); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+
+  .Food_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2px 0; 
+  }
+  
+  .Food_items img {
+    width: 250px; 
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .Food_items div {
+    text-align: center; 
+    font-family: Arial, sans-serif;
+    font-size: 18px; 
+    margin: 0 3px; 
+  }
+  .Food_items_name{
+    width: 200px;
+  }
